@@ -1,0 +1,163 @@
+* {
+	font-family: 'Yatra One', 'Pavanam', sans-serif;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	min-height: 100%;
+	position: relative;
+}
+
+body{
+	
+}
+
+.page-content {
+	width: 100%;
+	height: calc(1080px+ 560px); /*1080px - 500px*/
+	margin: 0 auto;
+}
+
+header {
+	display: inline-block;
+	height: 37px;
+	text-align: left;
+	padding-left: 10px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+header h1 {
+	font-size: 40pt;
+	
+}
+
+.side-nav {
+	width: 210px;
+	height: 100%;
+	margin-left: 20px;
+}
+
+.links {
+	width: 100%;
+	margin: 6px;
+
+	text-align:right;
+	list-style-type:none;
+}
+
+.links h2 {
+	color: #777;
+}
+
+
+
+.links a:link {
+	text-decoration: none;
+}
+
+.links a:visted {
+	text-decoration: none;
+}
+
+.links a:hover {
+	text-decoration: underline;
+	color: #000;
+}
+
+.links a:active {
+	text-decoration: underline;
+}
+
+footer {
+	position: absolute;
+	width: 300px;
+	text-align:center;
+	bottom: 10px;
+}
+
+.content-block {
+	position: absolute;
+	/*min-width: 780px;*/
+	width: calc(100% - 200px - 70px);
+	top: 100px; /*header.height*/
+	right: 20px; /*side-nav.width*/
+	height:calc(100% - 80px - 20px); /*100% - header.height*/
+	/*max-height: 905px;*/
+	overflow-x: scroll;
+	/*overflow-y: hidden;*/
+	padding: 0px;
+}
+
+.piece-container {
+	display: flex;
+	flex: row wrap;
+	width: auto;
+	height: 100%;
+}
+
+.piece {
+	width: auto;
+	height: auto;
+	max-height: calc(100% - 70px);
+	position: relative;
+	flex: 1 100%;
+	flex-basis: auto;
+}
+
+.piece img {
+	width: auto;
+	height: auto;
+	max-height: 100%;
+	
+	/*max-width: 100%;
+	min-width: 20%;
+	height: auto;
+	width: auto\9; /*IE 8*/
+}
+
+.piece section{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+	background-color: rgba(190, 190, 190, 0.6);
+	padding: 6px 3px;
+	text-align: center;
+	display: none;
+}
+
+.piece:hover section{
+	display: inline-block;
+}
+.piece section > p {
+	font-family: 'Josefin Sans', 'Yatra One', sans-serif;
+	margin: 0 auto;
+	margin-top: 50%;
+	text-align: center;
+	color: #000;
+}
+
+.piece iframe{
+	width: 1920px;
+	height: 1080px;
+}
+
+#current{
+	text-decoration: underline;
+	
+}
+
+.unfinished {
+	color: red;
+	text-decoration: line-through; 
+}
+
+p{
+	font-family: 'Josefin Sans', 'Yatra One', sans-serif;
+	margin-left: 10px;
+	width: 50%;
+	text-align: justify;
+}
