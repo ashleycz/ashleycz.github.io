@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>Gallery</title>
+		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+		<link rel="icon" href="pics/face.gif" type="image/gif" sizes="32x32">
+		<link rel="stylesheet" type="text/css" href="bxslider/bxslider.css" />
+		<!-- Loads Document Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<!-- Loads jQuery library via CDN -->
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+		<!-- Calls bxSlider Javascript file -->
+		<script src="bxslider/bxslider.min.js"></script>
+		<!-- Calls bxSlider Function -->
+		<script src="bxslider/slider.js"></script>
+	</head>
+	<body onload='captionResize()' onresize='captionResize()'>
+		<nav id="main-navigation" class="navigation">
+			 <a href="#"><span class="x-mark">&#10006;</span></a>
+			 <h3>Toggle Visibility</h3>
+			 <ul class="">
+				 <li><a id='drawingButton' onclick="toggleDisplay('drawing')">Drawings</a></li>
+				 <li><a id='paintingButton' onclick="toggleDisplay('painting')">Paintings</a></li>
+				 <li><a id='gifButton' onclick="toggleDisplay('gif')">Animations</a></li>
+			 </ul>
+		</nav>
+		<div class="icon-wrap">
+			<a href="#main-navigation"><img src='pics/hamburger.png' alt='&#9776;'/></a>
+		</div>
+		<header>
+			<h1>Gallery</h1>
+		</header>
+		<section class='main'>
+			<div id='slider-and-info'>
+			<div>
+				<div class='bxslidercontainer'><ul class="bxslider">
+					<li><img src="pics/sketch14thumb.png" title="Pose and Expression Study" alt="Sketch 14 Thumb" /></li>
+					<li><img src="pics/sketch15thumb.png" title="Ready to Take Over the Wrold" alt="Sketch 15 Thumb" /></li>
+					<li><img src="pics/sketch16thumb.png" title="More Dynamic Poses" alt="Sketch 16 Thumb" /></li>
+					<li><img src="pics/sketch17thumb.png" title="Another Pose and Expression Study" alt="Sketch 17 Thumb" /></li>
+				</ul></div>
+			</div>
+				<div id='info'>
+					<h1>Please hire me I need a job!</h1>
+					<hr>
+					<p>My name is Christian Ashley. I'm a soon-to-be college graduate hoping to not be unemployed.
+					Here is a selection of my work.
+					</p>
+				</div>
+			</div>
+			<div class='img-container'>
+				<div class='panel drawing'>
+					<img id='img01' src='pics/sketch01thumb.png' alt='Sketch 01 Thumb'/>
+					<div id='caption01' class='caption'>
+						<p>9-30-2015 Digital Drawing</p>
+					</div>
+				</div>
+				<div class='panel painting'>
+					<img src='pics/sketch02thumb.png' alt='Sketch 02 Thumb'/>
+					<div class='caption'>
+						<p>9-13-2016 Digital Painting Self Portrait</p>
+					</div>
+				</div>
+				<div class='panel drawing'>
+					<img src='pics/sketch03thumb.png' alt='Sketch 03 Thumb'/>
+					<div class='caption'>
+						<p>11-9-2015 Digital Drawing</p>
+					</div>
+				</div>
+				<div class='panel wide drawing'>
+					<img src='pics/sketch04thumb.png' alt='Sketch 04 Thumb'/>
+					<div class='caption'>
+						<p>Dog Character Experssions</p>
+					</div>
+				</div>
+				<div class='panel drawing'>
+					<img src='pics/sketch05thumb.png' alt='Sketch 05 Thumb'/>
+					<div class='caption'>
+						<p>August 2016 Character WIP</p>
+					</div>
+				</div>
+				
+				<div class='panel drawing'>
+					<img src='pics/sketch07thumb.png' alt='Sketch 07 Thumb'/>
+					<div class='caption'>
+						<p>Face Study 1</p>
+					</div>
+				</div>
+				<div class='panel drawing'>
+					<img src='pics/sketch08thumb.png' alt='Sketch 08 Thumb'/>
+					<div class='caption'>
+						<p>Face Study 2</p>
+					</div>
+				</div>
+				<div class='panel drawing'>
+					<img src='pics/sketch09thumb.png' alt='Sketch 09 Thumb'/>
+					<div class='caption'>
+						<p>Face Study 3</p>
+					</div>
+				</div>
+				<div class='panel wide drawing'>
+					<img src='pics/sketch10thumb.png' alt='Sketch 10 Thumb'/>
+					<div class='caption'>
+						<p>Caricatures</p>
+					</div>
+				</div>
+				<div class='panel wide drawing'>
+					<img src='pics/sketch11thumb.png' alt='Sketch 11 Thumb'/>
+					<div class='caption'>
+						<p>Face Study 4</p>
+					</div>
+				</div>
+				<div class='panel wide drawing'>
+					<img src='pics/sketch12thumb.png' alt='Sketch 12 Thumb'/>
+					<div class='caption'>
+						<p>Dog Expressions 2</p>
+					</div>
+				</div>
+				<div class='panel wide painting'>
+					<img src='pics/sketch18thumb.png' alt='Sketch 18 Thumb'/>
+					<div class='caption'>
+						<p>Dog Colors</p>
+					</div>
+				</div>
+				<div class='panel painting'>
+					<img src='pics/sketch19thumb.png' alt='Sketch 19 Thumb'/>
+					<div class='caption'>
+						<p>Value Study Digital Painting</p>
+					</div>
+				</div>
+				<div class='panel wide painting'>
+					<img src='pics/sketch20thumb.png' alt='Sketch 20 Thumb'/>
+					<div class='caption'>
+						<p>Elf Face Study</p>
+					</div>
+				</div>
+				<div class='panel drawing'>
+					<img src='pics/sketch22thumb.png' alt='Sketch 22 Thumb'/>
+					<div class='caption'>
+						<p>Swingin' Woman</p>
+					</div>
+				</div>
+				<div class='panel wide drawing'>
+					<img src='pics/sketch23thumb.png' alt='Sketch 23 Thumb'/>
+					<div class='caption'>
+						<p>TERA Fan Character</p>
+					</div>
+				</div>
+				<div class='panel drawing'>
+					<img src='pics/sketch24thumb.png' alt='Sketch 24 Thumb'/>
+					<div class='caption'>
+						<p>Face Study 5</p>
+					</div>
+				</div>
+				<div class='panel wide painting'>
+					<img src='pics/sketch25thumb.png' alt='Sketch 25 Thumb'/>
+					<div class='caption'>
+						<p>Toon Character Study</p>
+					</div>
+				</div>
+				<div class='panel drawing'>
+					<img src='pics/sketch26thumb.png' alt='Sketch 26 Thumb'/>
+					<div class='caption'>
+						<p>Fantasy Costume Design</p>
+					</div>
+				</div>
+				<div class='panel gif'>
+					<img src='pics/sprite.gif' alt='Sprite Gif'/>
+					<div class='caption'>
+						<p>Animated Sprite Face Study</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<p>&copy;Christian Ashley 2016</p>
+		</footer>
+		<script type='text/javascript'>
+		
+			function captionResize(){
+				var imgs = document.getElementsByTagName("img");
+				var captions = document.getElementsByClassName("caption");
+				var offset = imgs.length - captions.length;
+				for(var i= offset; i < imgs.length; i++){
+					captions[i-offset].setAttribute("style", 'width: ' + imgs[i].width + 'px;height: ' + imgs[i].height + 'px;');
+				}
+			}
+			
+			function toggleDisplay(className){
+				var changed = document.getElementsByClassName(className);
+				var all = document.getElementsByClassName('panel');
+				var imgs = document.getElementsByTagName("img");
+				var newDisplay = 'none';
+				if(changed[0].style.display == 'none'){
+					newDisplay = 'inline-block';
+				}
+				for(var i = 0; i < changed.length; i++){
+					changed[i].setAttribute("style", 'display: ' + newDisplay);
+				}
+				var noneOn = false;
+				for(var j = 0; j < all.length; j++){
+					if(all[j].style.display != 'none'){
+						noneOn = false;
+						break;
+					}
+					else noneOn = true;
+				}
+				if(noneOn){
+					for(var k = 0; k < all.length; k++){
+						all[k].setAttribute("style", 'display: inline-block;');
+					}
+				}
+				var toggled = document.getElementById(className + 'Button');
+				if(toggled.className == 'toggled') toggled.className = '';
+				else toggled.className = 'toggled';
+				console.log(toggled.className);
+				captionResize();
+			}
+		</script>
+	</body>
+</html>
