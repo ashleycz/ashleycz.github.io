@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>KillMe.html</title>
+		<link rel="icon" href="pics/face.gif" type="image/gif" sizes="32x32">
+		<link rel="stylesheet" type="text/css" href="bxslider/bxslider.css" />
+		<!-- Loads Document Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<!-- Loads jQuery library via CDN -->
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+		<!-- Calls bxSlider Javascript file -->
+		<script src="bxslider/bxslider.min.js"></script>
+		<!-- Calls bxSlider Function -->
+		<script src="bxslider/slider.js"></script>
+	</head>
+	<body onload='captionResize()'>
+		<header>
+			<h1>Gallery</h1>
+		</header>
+		<!--<nav>
+			<div><h1><a href=''>Drawings</a></h1></div>
+			<div><h1><a href=''>Paintings</a></h1></div>
+			<div><h1><a href=''>3D Work</a></h1></div>
+			<div><h1><a href=''>Video</a></h1></div>
+		</nav>-->
+		<section class='main'>
+			<!--<div class='slider'>
+				<div class='slider-button' id='slider-button-left'>&#60;</div>
+				<div class='slider-button' id='slider-button-right'>&#62;</div>
+			</div>-->
+			<div class='bxslidercontainer'><ul class="bxslider">
+				<li><img src="pix/mtn.png" title="Mt. Katahdin from the south, at Ripogenus Dam" alt="mountain" /></li>
+				<li><img src="pix/river.png" title="East Branch of the Penobscot River" alt="river" /></li>
+				<li><img src="pix/gorge.png" title="Ripogenus Gorge from above" alt="gorge" /></li>
+				<li><img src="pix/pine.png" title="Pine tree hollow" alt="pine" /></li>
+			</ul></div>
+			<div class='img-container'>
+				<div class='panel'>
+					<img id='img01' src='pics/sketch01thumb.png' alt='Sketch 01 Thumb'/>
+					<div id='caption01' class='caption' >
+						<!--<span class='modal-exit'>&times;</span>-->
+						<p>This is a caption.</p>
+					</div>
+				</div>
+				<div class='panel'>
+					<img src='pics/sketch02thumb.png' alt='Sketch 02 Thumb'/>
+					<div class='caption'>
+						<!--<span class='modal-exit'>&times;</span>-->
+						<p>This is a caption.</p>
+					</div>
+				</div>
+				<div class='panel'>
+					<img src='pics/sketch03thumb.png' alt='Sketch 03 Thumb'/>
+					<div class='caption'>
+						<!--<span class='modal-exit'>&times;</span>-->
+						<p>This is a caption.</p>
+					</div>
+				</div>
+				<div class='panel wide'>
+					<img src='pics/sketch04thumb.png' alt='Sketch 04 Thumb'/>
+					<div class='caption'>
+						<!--<span class='modal-exit'>&times;</span>-->
+						<p>This is a caption.</p>
+					</div>
+				</div>
+				<div class='panel'>
+					<img src='pics/sketch05thumb.png' alt='Sketch 05 Thumb'/>
+					<div class='caption'>
+						<!--<span class='modal-exit'>&times;</span>-->
+						<p>This is a caption.</p>
+					</div>
+				</div>
+				
+				<div class='panel'>
+					
+					<img src='pics/sketch07thumb.png' alt='Sketch 07 Thumb'/>
+					<div class='caption'>
+						<!--<span class='modal-exit'>&times;</span>-->
+						<p>This is a caption.</p>
+					</div>
+					</div
+				</div>
+				<div class='panel'>
+					<img src='pics/sketch08thumb.png' alt='Sketch 08 Thumb'/>
+					<div class='caption'>
+						<!--<span class='modal-exit'>&times;</span>-->
+						<p>This is a caption.</p>
+					</div>
+				</div>
+				<div class='panel'>
+					<img src='pics/sketch09thumb.png' alt='Sketch 09 Thumb'/>
+					<div class='caption'>
+						<!--<span class='modal-exit'>&times;</span>-->
+						<p>This is a caption.</p>
+					</div>
+				</div>
+				<div class='panel wide'>
+					<img src='pics/sketch10thumb.png' alt='Sketch 10 Thumb'/>
+					<div class='caption'>
+						<!--<span class='modal-exit'>&times;</span>-->
+						<p>This is a caption.</p>
+					</div>
+				</div>
+				<div class='panel wide'>
+					<img src='pics/sketch11thumb.png' alt='Sketch 11 Thumb'/>
+					<div class='caption'>
+						<!--<span class='modal-exit'>&times;</span>-->
+						<p>This is a caption.</p>
+					</div>
+				</div>
+				<div class='panel wide'>
+					<img src='pics/sketch12thumb.png' alt='Sketch 12 Thumb'/>
+					<div class='caption'>
+						<!--<span class='modal-exit'>&times;</span>-->
+						<p>This is a caption.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<p>&copy;Christian Ashley 2016</p>
+		</footer>
+		<script type='text/javascript'>
+			function captionResize(){
+				console.log("Test");
+				var imgs = document.getElementsByTagName("img");
+				var captions = document.getElementsByClassName("caption");
+				console.log(imgs[0].style.height);
+				console.log(captions[0].style.height);
+				console.log("imgs length: " + imgs.length);
+				for(var i=4; i < imgs.length; i++){
+					var caption = captions[i-4];
+					var img = imgs[i-4];
+					console.log(img.style.height);
+					console.log("before height:" + caption.style.height);
+					captions[i-4].style.width = imgs[i].style.width;
+					captions[i-4].style.height = imgs[i].style.height;
+					console.log(img.style.height);
+					console.log("after height:" + caption.style.height);
+					
+				}
+			}
+		</script>
+	</body>
+</html>
