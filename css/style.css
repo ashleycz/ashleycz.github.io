@@ -1,0 +1,298 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 16px;
+}
+
+body {
+	width: 100%;
+	height: auto;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+header {
+	width: 100%;
+	height: 3.5rem;
+	text-align: left;
+	background-color: #c3dac3;
+}
+
+a{
+	font-weight: 700;
+}
+
+#main-navigation:target {/*-- sets width of nav panel when opened --*/
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+.navigation {/*-- Sets properties of nav panel (closed by default) --*/
+  width: 0;
+  text-align: center;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 45%; /*-- sets the nav panel height --*/
+	transition: width .4s ease;
+	background-color: #c3dac3;
+	z-index: 10000;
+	box-shadow: inset 5px 5px 0 #6b6054, inset 0px -5px 0 #6b6054;
+}
+.navigation h3 {/*-- positions the nav h3 element --*/
+	font-size: 2em;
+  padding-left: 30px;
+}
+.navigation ul { /*-- removes bullets from list items --*/
+	list-style-type: none;
+	font-size: 1.8em;
+  padding-left: 30px;
+}
+.navigation li a { /*-- sets anchors to block and pads them --*/
+	display: block;
+	padding: 30px;
+	text-decoration: none;
+}
+.navigation li a:hover { /*-- sets anchor properties on hover --*/
+	cursor: pointer;
+	text-decoration: line-through;
+}
+.toggled{
+	display: block;
+	padding: 30px;
+	text-decoration: line-through;
+}
+.toggled:hover { /*-- sets anchor properties on hover --*/
+	cursor: pointer;
+	text-decoration: none;
+}
+.icon-wrap { /*-- sets icon container position --*/
+	width: 60px;
+	height: 60px;
+	opacity: 0.4;
+	background: white;
+	border: 2px solid #555;
+	border-radius: 8px;
+	position: fixed;
+	z-index: 10;
+	top: 20px;
+	right: 20px;
+	-webkit-transistion: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+.icon-wrap img{
+	width: 100%;
+	height: 100%;
+}
+.icon-wrap:hover { /*-- sets nav icon color on hover --*/
+	opacity: 1.0;
+}
+span.x-mark { /*-- sets close icon apperance and position --*/
+	color: #555;
+	font-size: 2em;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 0 .7rem;
+}
+span:hover.x-mark { /*-- sets close icon color on hover --*/
+	color: #999;
+}
+
+.main {
+	width: 100%;
+	height: auto;
+	min-height: calc(100vh - 3.5rem - 40px);
+	padding: 10px 0;
+	background-color: #a1b0ab;
+}
+
+#slider-and-info{
+	font-size: 24px;
+	width: 95%;
+	height: auto;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+}
+
+#slider-and-info > *{
+	flex: 1 300px;
+	margin: 1rem;
+	text-align: justify;
+	position: relative;
+}
+
+.bxslidercontainer {
+	width: 95%;
+	max-width: 278px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.img-container {
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	border: 5px solid #CEA77D;
+	width: 95%;
+	margin: 0 auto;
+	margin-bottom: 2em;
+	background-color: #E5D2BE;
+	box-shadow: 0 5px 10px 10px rgba(20, 20, 20, 0.2);
+	-moz-box-shadow: 0 5px 10px 10px rgba(20, 20, 20, 0.2);
+	-webkit-box-shadow: 0 5px 10px 10px rgba(20, 20, 20, 0.2);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+.panel {
+	margin: 1rem;
+	flex: 1 300px;
+	/*background-color: purple;*/
+	position: relative;
+	overflow: hidden;
+}
+
+.wide {
+	flex: 2 600px;
+}
+
+.panel > img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+}
+
+.panel-content{
+	height:auto;
+	width: 100%;
+}
+
+.panel-content img:hover .caption{
+	opacity: 1;
+}
+
+.caption {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+	opacity: 0.0;
+	-webkit-transistion: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+
+.caption > p {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 2rem;
+	color: white;
+	cursor: pointer;
+}
+
+/*.caption:hover, .caption:focus {
+	opacity: 1.0;
+}*/
+
+.caption:active {
+	opacity: 1.0;
+}
+
+.modal-exit {
+	position: absolute;
+	top: 1rem;
+	right: 2rem;
+	color: white;
+	font-size: 2rem;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.modal-exit:hover, .model-exit:focus {
+	color: #f00;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+footer {
+	width: 100%;
+	height: 20px;
+	text-align: center;
+	background-color: #6b6054;
+}
+
+#resume {
+	background-color: white;
+	height: 780px;
+}
+
+#resume-header {
+	margin-left: 2.5%;
+}
+
+#resume-header a{
+	text-decoration: none;
+	font-size: 3rem;
+}
+
+#resume-header a:link, #resume-header a:visited{
+	color: black;
+}
+
+#resume-header a:hover, #resume-header a:active{
+	color: grey;
+}
+
+@media only screen and (min-device-width: 760px) and (min-width: 760px){
+	#main-navigation:target {/*-- sets width of nav panel when opened --*/
+	  max-width: 32%;
+	  width: 20em;
+	}
+	
+	.navigation{
+		text-align: left;
+	}
+	
+	.panel {
+		margin: 1rem;
+		flex: 1 300px;
+		/*background-color: purple;*/
+		position: relative;
+		overflow: hidden;
+	}
+
+	.wide {
+		flex: 2 600px;
+	}
+	
+	.modal-exit{
+		display: none;
+	}
+}
+
+@media only screen and (min-device-width: 760px){
+	#slider-and-info{
+		font-size: 16px;
+		flex-flow: row wrap;
+	}
+	
+	.caption:hover, .caption:focus {
+		opacity: 1.0;
+	}
+}
