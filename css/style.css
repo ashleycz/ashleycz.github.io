@@ -16,9 +16,16 @@ h1 {
 
 header {
 	width: 100%;
+	
 	height: 3.5rem;
 	text-align: left;
 	background-color: #c3dac3;
+}
+
+header h1{
+	width: 95%;
+	margin: 0 auto;
+	font-family: 'Yatra One', sans-serif;
 }
 
 a{
