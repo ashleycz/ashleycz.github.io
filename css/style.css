@@ -178,6 +178,11 @@ span:hover.x-mark { /*-- sets close icon color on hover --*/
 	margin: auto;
 }
 
+.panel > iframe {
+	display: block;
+	margin: 0 auto;
+}
+
 .panel-content{
 	height:auto;
 	width: 100%;
@@ -256,6 +261,8 @@ footer {
 #resume-header a{
 	text-decoration: none;
 	font-size: 3rem;
+	-webkit-transistion: color 0.2s;
+	transition: color 0.2s;
 }
 
 #resume-header a:link, #resume-header a:visited{
