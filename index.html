@@ -12,52 +12,20 @@
 		
 	</head>
 	<body onload='captionResize()' onresize='captionResize()'>
-		<nav id="main-navigation" class="navigation">
-			 <a href="#"><span class="x-mark">&#10006;</span></a>
-			 <h3>Toggle Visibility</h3>
-			 <ul class="">
-				 <li><a id='drawingButton' onclick="toggleDisplay('drawing')">Drawings</a></li>
-				 <li><a id='paintingButton' onclick="toggleDisplay('painting')">Paintings</a></li>
-				 <li><a id='gifButton' onclick="toggleDisplay('gif')">Animations</a></li>
-			 </ul>
-		</nav>
-		<div class="icon-wrap">
-			<a href="#main-navigation"><img src='pics/hamburger.png' alt='&#9776;'/></a>
-		</div>
 		<header>
 			<h1>Christian Ashley</h1>
 		</header>
 		<section class='main'>
-			<div id='slider-and-info'>
-			<!--<div>
-				<div class='bxslidercontainer'><ul class="bxslider">
-					<li><img src="pics/sketch14thumb.png" title="Pose and Expression Study" alt="Sketch 14 Thumb" /></li>
-					<li><img src="pics/sketch15thumb.png" title="Ready to Take Over the Wrold" alt="Sketch 15 Thumb" /></li>
-					<li><img src="pics/sketch16thumb.png" title="More Dynamic Poses" alt="Sketch 16 Thumb" /></li>
-					<li><img src="pics/sketch17thumb.png" title="Another Pose and Expression Study" alt="Sketch 17 Thumb" /></li>
-				</ul></div>
-			</div>-->
-				<div id='info'>
-					<h1>Please hire me I need a job!</h1>
-					<hr>
-					<p>My name is Christian Ashley. I'm a soon-to-be college graduate hoping to not be unemployed.
-					Here is a selection of my work.
-					</p>
-				</div>
-				<div id='Bio'>
-					<h1>Bio</h1>
-					<hr>
-					<p>Christian Z. Ashley is a digital artist from Upstate New York (born in 1993). He has a particular affinity for character design and animation as well as the multitude of ways people create characters out of themselves both on- and offline. He uses modes such as Photoshop for traditional design and screen-capture for recording digital interaction. Christian is currently a student at Clarkson University in Potsdam New York and will be graduating with his BS in Digital Arts & Sciences in December 2016.</p>
-				</div>
-				<div id='Statement'>
-					<h1>Artist Statement</h1>
-					<hr>
-					<p>A major goal of my work is to experiment with various forms that  best convey a story or message. More specifically I am interested in  the methods which structure the interpretation of a character&#39;s role in a given narrative. I enjoy visually constructing a model and imagining the ways the character might move and behave. Every visual style, from the drawings of Andrew Loomis to Adventure Time, inherits a unique tone which dictates what we expect out of a piece. Conceptually, I use a broader definition of characters and attempt to exploit our perceptions using the redefinition. By treating less traditional personifications as characters, such as social media profiles, I am interested in examining how we view characters against the burgeoning backdrop of Internet and the tools at our disposal to tell messages or stories in new and interesting ways. 
-					Currently,  I have a particular interest in Internet Meme culture and the constructedness of net celebrities and personalities  with their methods for retaining audience engagement.  While modern Internet advertising practices (e.g intrusive video ads) focus more on increasingly modular and vapid ways to market new material, it&#39;s refreshing to see commitment to a newly established continuity. I aim to explore the &quot;default state&quot; of an online persona and the opportunities and limitations afforded to that persona. That is to say I enjoy analysing the state of a social media account before the user has established themselves  into their account persona.  Through future works, I hope to continue to investigate and redefine character development in a digital space.
-					</p>
-				</div>
+			
+			<div id='gallery-nav'>
+				<a onclick="toggleDisplay('all')"><div id='allButton' class='currentTab nav-button'>All</div></a>
+				<a onclick="toggleDisplay('drawing')"><div id='drawingButton' class='nav-button'>Drawings</div></a>
+				<a onclick="toggleDisplay('painting')"><div id='paintingButton' class='nav-button'>Paintings</div></a>
+				<a onclick="toggleDisplay('animation')"><div id='animationButton' class='nav-button'>Animations</div></a>
+				<a onclick="toggleDisplay('resume')"><div id='resumeButton' class='nav-button'>Resume</div></a>
+				<a onclick="toggleDisplay('contact')"><div id='contactButton' class='nav-button'>Contact</div></a>
 			</div>
-			<div class='img-container'>
+			<div id='gallery' class='img-container'>
 				<div class='panel drawing'>
 					<img id='img01' src='pics/sketch01thumb.png' alt='Sketch 01 Thumb'/>
 					<a href='pics/sketch01thumb.png'><div id='caption01' class='caption'>
@@ -79,7 +47,7 @@
 				<div class='panel wide drawing'>
 					<img src='pics/sketch04thumb.png' alt='Sketch 04 Thumb'/>
 					<a href='pics/sketch04thumb.png'><div class='caption'>
-						<p>Dog Character Experssions</p>
+						<p>Dog Character Expressions</p>
 					</div></a>
 				</div>
 				<div class='panel drawing'>
@@ -173,27 +141,47 @@
 						<p>Fantasy Costume Design</p>
 					</div></a>
 				</div>
-				<div class='panel gif'>
+				<div class='panel animation'>
 					<img src='pics/sprite.gif' alt='Sprite Gif'/>
 					<a href='pics/sprite.gif'><div class='caption'>
 						<p>Animated Sprite Face Study</p>
 					</div></a>
 				</div>
-				<div class='panel wide '>
+				<div class='panel wide animation'>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/7jWEaJ4lghY" frameborder="0" allowfullscreen></iframe>
 				</div>
-				<div class='panel wide '>
+				<div class='panel wide animation'>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/ZHgC53aARfI" frameborder="0" allowfullscreen></iframe>
 				</div>
-				<div class='panel wide'>
+				<div class='panel wide animation'>
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/X8bcq24A0O4" frameborder="0" allowfullscreen></iframe>
 				</div>
-			</div>
-			<div id='resume-header'>
-				<h1><a href="resume/resume.html">Resume</a></h1>
-			</div>
-			<div id="resume" class='img-container'>
-				<iframe width='100%' height='100%' frameBorder='0' src='resume/resumeNoHeader.html'></iframe>
+				<div id="resume" class='panel resume'>
+					<iframe width='100%' height='100%' frameBorder='0' alt='Resume Viewer' src='resume/resume.html'></iframe>
+				</div>
+				<div id="contact" class='panel contact'>
+					<div id='slider-and-info'>
+						<div id='info'>
+							<h1>Please hire me I need a job!</h1>
+							<hr>
+							<p>My name is Christian Ashley. I'm a soon-to-be college graduate hoping to not be unemployed.
+							Here is a selection of my work.
+							</p>
+						</div>
+						<div id='Bio'>
+							<h1>Bio</h1>
+							<hr>
+							<p>Christian Z. Ashley is a digital artist from Upstate New York (born in 1993). He has a particular affinity for character design and animation as well as the multitude of ways people create characters out of themselves both on- and offline. He uses modes such as Photoshop for traditional design and screen-capture for recording digital interaction. Christian is currently a student at Clarkson University in Potsdam New York and will be graduating with his BS in Digital Arts & Sciences in December 2016.</p>
+						</div>
+						<div id='Statement'>
+							<h1>Artist Statement</h1>
+							<hr>
+							<p>A major goal of my work is to experiment with various forms that  best convey a story or message. More specifically I am interested in  the methods which structure the interpretation of a character&#39;s role in a given narrative. I enjoy visually constructing a model and imagining the ways the character might move and behave. Every visual style, from the drawings of Andrew Loomis to Adventure Time, inherits a unique tone which dictates what we expect out of a piece. Conceptually, I use a broader definition of characters and attempt to exploit our perceptions using the redefinition. By treating less traditional personifications as characters, such as social media profiles, I am interested in examining how we view characters against the burgeoning backdrop of Internet and the tools at our disposal to tell messages or stories in new and interesting ways. 
+							Currently,  I have a particular interest in Internet Meme culture and the constructedness of net celebrities and personalities  with their methods for retaining audience engagement.  While modern Internet advertising practices (e.g intrusive video ads) focus more on increasingly modular and vapid ways to market new material, it&#39;s refreshing to see commitment to a newly established continuity. I aim to explore the &quot;default state&quot; of an online persona and the opportunities and limitations afforded to that persona. That is to say I enjoy analysing the state of a social media account before the user has established themselves  into their account persona.  Through future works, I hope to continue to investigate and redefine character development in a digital space.
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
 		<footer>
@@ -213,31 +201,42 @@
 			function toggleDisplay(className){
 				var changed = document.getElementsByClassName(className);
 				var all = document.getElementsByClassName('panel');
-				var imgs = document.getElementsByTagName("img");
-				var newDisplay = 'none';
-				if(changed[0].style.display == 'none'){
-					newDisplay = 'inline-block';
-				}
-				for(var i = 0; i < changed.length; i++){
-					changed[i].setAttribute("style", 'display: ' + newDisplay);
-				}
-				var noneOn = false;
-				for(var j = 0; j < all.length; j++){
-					if(all[j].style.display != 'none'){
-						noneOn = false;
-						break;
+				if(className !== 'all' && className!== 'resume'  && className!== 'contact') {
+					for(var i = 0; i < all.length; i++){
+						all[i].setAttribute("style", 'display: none');
 					}
-					else noneOn = true;
-				}
-				if(noneOn){
-					for(var k = 0; k < all.length; k++){
-						all[k].setAttribute("style", 'display: inline-block;');
+				
+					for(var j = 0; j < changed.length; j++){
+						changed[j].setAttribute("style", 'display: inline-block');
 					}
 				}
-				var toggled = document.getElementById(className + 'Button');
-				if(toggled.className == 'toggled') toggled.className = '';
-				else toggled.className = 'toggled';
-				console.log(toggled.className);
+				else if(className !== 'all' && className == 'resume') {
+					for(var i = 0; i < all.length; i++){
+						all[i].setAttribute("style", 'display: none');
+					}
+					document.getElementById('resume').setAttribute("style", 'display: inline-block');
+				}
+				else if(className !== 'all' && className == 'contact') {
+					for(var i = 0; i < all.length; i++){
+						all[i].setAttribute("style", 'display: none');
+					}
+					document.getElementById('contact').setAttribute("style", 'display: inline-block');
+				}
+				else {
+					for(var i = 0; i < all.length; i++){
+						all[i].setAttribute("style", 'display: inline-block');
+					}
+					document.getElementById('resume').setAttribute("style", 'display: none');
+					document.getElementById('contact').setAttribute("style", 'display: none');
+				}
+				var buttons = document.getElementsByClassName('nav-button');
+				for(var a = 0; a < buttons.length; a++){
+					if(buttons[a].classList.contains("currentTab")) {buttons[a].classList.remove("currentTab")}
+				}
+				var clickedButton = document.getElementById(className + 'Button');
+				clickedButton.classList.add("currentTab");	
+				
+				
 				captionResize();
 			}
 		</script>
