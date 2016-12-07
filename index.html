@@ -4,14 +4,19 @@
 		<title>Christian Ashley</title>
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
-		<link rel="icon" href="pics/face.gif" type="image/gif" sizes="32x32">
+		<link rel="icon" href="pics/favico.png" type="image/gif" sizes="32x32">
 		<!-- Loads Document Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<!-- Loads jQuery library via CDN -->
 		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-		
+		<script type="text/javascript">
+			$(window).ready(function() {
+				$(".loader").fadeOut("slow");
+			})
+		</script>
 	</head>
 	<body onload='captionResize()' onresize='captionResize()'>
+	<div class="loader"></div>
 		<header>
 			<h1>Christian Ashley</h1>
 		</header>
@@ -157,16 +162,28 @@
 					<iframe width="560" height="315" src="https://www.youtube.com/embed/X8bcq24A0O4" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div id="resume" class='panel resume'>
+					<a href="resume/resume.pdf" target="_blank"><div id="resumeDownload">&#9947;</div></a>
 					<iframe width='100%' height='100%' frameBorder='0' alt='Resume Viewer' src='resume/resume.html'></iframe>
 				</div>
 				<div id="contact" class='panel contact'>
 					<div id='slider-and-info'>
 						<div id='info'>
-							<h1>Please hire me I need a job!</h1>
+							<!--<h1>Please hire me I need a job!</h1>
 							<hr>
 							<p>My name is Christian Ashley. I'm a soon-to-be college graduate hoping to not be unemployed.
 							Here is a selection of my work.
+							</p>-->
+							<h1>Say Hi!</h1>
+							<hr>
+							<p>
+							email: ashleycz1993@gmail.com
+							<br/>
+							phone: 1-315-323-1914
 							</p>
+							<div>
+								<img src='pics/sprite-transparent.gif' alt='Sprite Gif'/>
+								<div class='caption hidden'></div>
+							</div>
 						</div>
 						<div id='Bio'>
 							<h1>Bio</h1>
